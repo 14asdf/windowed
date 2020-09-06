@@ -5,12 +5,26 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "pack": "build --dir",
-    "dist": "build"
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "build": {
     "appId": "com.windowed.app",
-    "productName": "Windowed"
+    "productName": "Windowed",
+    "dmg": {
+      "contents": [
+        {
+          "x": 110,
+          "y": 150
+        },
+        {
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
   },
   "author": "Windowed.io",
   "keywords": [
@@ -22,7 +36,8 @@
     "pc"
   ],
   "devDependencies": {
-    "electron": "~1.6.2"
+    "electron": "~1.6.2",
+    "electron-builder": "^22.8.0"
   },
   "dependencies": {
     "electron-google-analytics": "0.0.17",

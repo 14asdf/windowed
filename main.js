@@ -1,5 +1,5 @@
-const Analytics  = require('electron-google-analytics');
-const analytics = new Analytics.default('UA-64857602-3');
+// const Analytics  = require('electron-google-analytics');
+// const analytics = new Analytics.default('UA-64857602-3');
 
 const electron = require('electron')
 const app = electron.app
@@ -63,15 +63,15 @@ function createWindow () {
   Menu.setApplicationMenu(Menu.buildFromTemplate(template));
 }
 
-function googleAnalytics(){
-    return analytics.screen('windowed', '1.0.0', 'com.windowed.app', 'com.windowed.app', 'user')
-  .then((response) => {
-    return response;
-  }).catch((err) => {
-    return err;
-  });
-}
-googleAnalytics();
+// function googleAnalytics(){
+//     return analytics.screen('windowed', '1.0.0', 'com.windowed.app', 'com.windowed.app', 'user')
+//   .then((response) => {
+//     return response;
+//   }).catch((err) => {
+//     return err;
+//   });
+// }
+// googleAnalytics();
 
 
 app.on('ready', createWindow)
