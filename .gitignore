@@ -1,0 +1,9 @@
+node_modules
+dist
+*.DS_Store
+/.firebase
+*.firebaserc
+firebase.json
+commit.js
+*.vscode
+package-lock.json
